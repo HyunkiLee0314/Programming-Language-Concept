@@ -1,0 +1,133 @@
+
+1.
+eBNF
+<expr> -> <term> {+<term>}
+
+bnf/cfg
+<expr> -> <term> | <expr> +<term>
+
+formal definition:  G = {V,E,R,S}
+
+V -> nonterminals
+E -> terminals
+R -> rules
+S -> start symbol
+2.
+4 3s 4 4s and 2 5s
+
+
+total correct : 
+
+partial correct: 
+
+
+
+example of proof
+
+
+while( count > 0)
+	count = count -1;
+{count = 0}
+
+
+
+? P = 
+? I = { count >= 0 }
+
+
+B = { count > 0 }
+Q = { count = 0 }
+S = [ count = count -1 ]
+
+
+{ I and B }
+    S
+{ I }
+
+Step2 ^
+
+{ count >= 0 AND count > 0 }
+	count = count -1;
+{ count >=0 }
+
+
+{count > 0 }
+	count = count -1;
+{count >=0 }
+
+
+{ count > 0 } ==> { count -1 >= 0 }
+
+count -1 >= 0
+	+1	+1
+
+count >=1 > 0
+
+count > 0
+
+
+{ I and not B } ==> Q
+
+{ count > = 0 AND (NOT count > 0)} ==> { count = 0}
+{count >= 0 AND count <= 0 } ==> { count = 0 }
+{ count = 0 } ==> { count = 0}
+
+weakest point -> I
+
+
+*example of if else statement
+
+{P}
+if B
+	then S1
+	else S2
+{Q}
+
+
+
+if ( number < 5 )
+	number = number + 5;
+else
+	number = number -5;
+{ number = 25 }
+
+
+{ number =30 }
+	number = number -5;
+{ number = 25 }
+
+
+{ number =20 } == weakest precondition.
+	number = number + 5;
+{ number = 25 }
+
+
+other example
+
+
+{ number < 20 }
+if ( number < 5 )
+	number = number + 5;
+else
+	number = number -5;
+{ number =< 25 }
+
+
+{ number <30 }
+	number = number -5;
+{ number < 25 }
+
+
+{ number <20 } == weakest precondition.
+	number = number + 5;
+{ number < 25 }
+
+
+
+
+example
+
+ExprSwitchStmt = "switch" "{" {ExprCaseClause } "}".
+
+ExprSwitchStmt--> switch { } | switch { ExprCaseClause }
+ExprCaseClauseList --> ExprCaseClause | ExprCaseClause ExprCaseClauseList

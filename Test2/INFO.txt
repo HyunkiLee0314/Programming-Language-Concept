@@ -1,0 +1,51 @@
+perl style id =>  $,@,%, a,b,c,d,...z
+
+Java-Style string literals => " "
+
+C-Style integer literals =>
+
+C-Style character literals => ' '
+
+
+C-Style floating point literals => .
+
+non-alphanumeric => +, =, -, /, *, %, !, (, ), ;, :, ++, --, &&, ||
+
+
+
+숫자로 시작하면 안됨
+
+
+
+	{"\"", DOUBLE_QUOTE},
+	
+	{"'", SINGLE_QUOTE},
+	
+	{"u", UNSIGNEDL},
+	{"U", UNSIGNEDC},
+	{"l", LONGL},
+	{"L", LONGC},
+	{"ll", LONG_LONGL},
+	{"LL", LONG_LONGC},
+	
+	{".", DOT},
+	{"f", FLOATING_SUFFL},
+	{"F", FLOATING_SUFFC},
+	{"l", FLOATING_SUFLL},
+	{"L", FLOATING_SUFLC},
+	
+	{"+", PLUS},
+	{"=", EQUAL},
+	{"-", MINUS},
+	{"/", DIVISION},
+	{"*", MULTI},
+	{"%", MODULO},
+	{"!", NOT},
+	{":", OPEN_CODE},
+	{";", CLOSE_CODE},
+	{"(", OPEN_FUNC},
+	{")", CLOSE_FUNC},
+	{"++", INCRE},
+	{"--", DECRE},
+	{"&&", AND},
+	{"||", OR},
