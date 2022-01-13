@@ -1,0 +1,5 @@
+parsers  -> top down/ bottom up
+	two grammer: LR LL
+
+
+6,7 그 언어들을 가서 확인하자
